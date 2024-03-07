@@ -1,0 +1,4 @@
+FROM docker.io/alpine
+RUN apk --no-cache add h2o
+WORKDIR /srv
+CMD ["/bin/sh"]

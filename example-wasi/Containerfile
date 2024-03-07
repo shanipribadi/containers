@@ -1,0 +1,3 @@
+FROM scratch
+COPY --from=docker.io/wasmedge/example-wasi:latest wasi_example_main.wasm /main.wasm
+CMD ["/main.wasm"]

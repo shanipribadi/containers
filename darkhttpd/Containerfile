@@ -1,0 +1,4 @@
+FROM docker.io/alpine
+RUN apk --no-cache add darkhttpd
+WORKDIR /srv
+CMD ["/bin/sh"]

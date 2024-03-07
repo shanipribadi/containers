@@ -1,0 +1,4 @@
+FROM docker.io/alpine
+RUN apk --no-cache add lighttpd
+WORKDIR /srv
+CMD ["/bin/sh"]

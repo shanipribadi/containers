@@ -1,0 +1,4 @@
+FROM tumbleweed
+RUN zypper --non-interactive in python312
+RUN python3.12 -m ensurepip
+
