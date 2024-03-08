@@ -1,0 +1,11 @@
+FROM tumbleweed
+RUN zypper --non-interactive in -f podman shadow
+RUN useradd -Um podman
+
+COPY sub /etc/subuid
+COPY sub /etc/subgid
+COPY root_containers.conf /etc/containers/containers.conf
+COPY user_containers.conf /home/podman/.config/containers/containers.conf
+
+VOLUME /var/lib/containers
+VOLUME /home/podman/.local/share/containers
